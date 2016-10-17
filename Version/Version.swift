@@ -22,7 +22,7 @@ public struct Version {
     }
 }
 
-extension Version {
+public extension Version {
     
     init?(string: String) {
         
