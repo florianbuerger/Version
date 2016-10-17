@@ -4,7 +4,7 @@
 
 import Foundation
 
-struct Version {
+public struct Version {
     let major: Int
     let minor: Int
     let patch: Int
@@ -66,38 +66,38 @@ extension Version {
 }
 
 extension Version: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         return "\(major).\(minor).\(patch)"
     }
 }
 
 extension Version: Equatable {}
-func ==(lhs: Version, rhs: Version) -> Bool {
+public func ==(lhs: Version, rhs: Version) -> Bool {
     return lhs.major == rhs.major && lhs.minor == rhs.minor && lhs.patch == rhs.patch
 }
 
 extension Version: Comparable {}
 
-func <(lhs: Version, rhs: Version) -> Bool {
+public func <(lhs: Version, rhs: Version) -> Bool {
     if lhs.major < rhs.major { return true }
     if lhs.major == rhs.major && lhs.minor < rhs.minor { return true }
     if lhs.major == rhs.major && lhs.minor == rhs.minor && lhs.patch < rhs.patch { return true }
     return false
 }
 
-func <=(lhs: Version, rhs: Version) -> Bool {
+public func <=(lhs: Version, rhs: Version) -> Bool {
     if lhs == rhs { return true }
     return lhs < rhs
 }
 
-func >(lhs: Version, rhs: Version) -> Bool {
+public func >(lhs: Version, rhs: Version) -> Bool {
     if lhs.major > rhs.major { return true }
     if lhs.major == rhs.major && lhs.minor > rhs.minor { return true }
     if lhs.major == rhs.major && lhs.minor == rhs.minor && lhs.patch > rhs.patch { return true }
     return false
 }
 
-func >=(lhs: Version, rhs: Version) -> Bool {
+public func >=(lhs: Version, rhs: Version) -> Bool {
     if lhs == rhs { return true }
     return lhs > rhs
 }
