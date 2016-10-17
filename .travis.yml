@@ -2,4 +2,4 @@ language: objective-c
 
 osx_image: xcode8
 
-script: xcodebuild -project Version.xcodeproj -scheme Version -sdk iphonesimulator10.0 -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0' clean build -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
+script: xcodebuild -project Version.xcodeproj -scheme Version -sdk iphonesimulator10.0 -destination 'platform=iOS Simulator,name=iPhone SE,OS=10.0' clean build -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
