@@ -410,6 +410,7 @@
 				178BCDFE1DB48ABC00312953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		178BCDFF1DB48ABC00312953 /* Build configuration list for PBXNativeTarget "VersionTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +419,7 @@
 				178BCE011DB48ABC00312953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
