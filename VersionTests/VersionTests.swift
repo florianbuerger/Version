@@ -20,6 +20,10 @@ class VersionTests: XCTestCase {
         XCTAssertEqual(Version(string: "1.2.3_1432"), Version(major: 1, minor: 2, patch: 3))
     }
     
+    func testCustomStringConvertible() {
+        XCTAssertEqual(Version(string: "1.2.3-alpha1")!.description, "1.2.3-alpha1")
+    }
+    
     func testSuffix() {
         XCTAssertEqual(Version(string: "1.2.3-alpha"), Version(major: 1, minor: 2, patch: 3, suffix: "alpha"))
         XCTAssertEqual(Version(string: "1.2.433-rc1.1.0"), Version(major: 1, minor: 2, patch: 433, suffix: "rc1.1.0"))

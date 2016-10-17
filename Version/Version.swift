@@ -67,7 +67,11 @@ extension Version {
 
 extension Version: CustomStringConvertible {
     public var description: String {
-        return "\(major).\(minor).\(patch)"
+        var string = "\(major).\(minor).\(patch)"
+        if let suffix = self.suffix {
+            string = string.appending(suffix)
+        }
+        return string
     }
 }
 
