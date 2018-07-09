@@ -28,8 +28,8 @@ public extension Version {
         
         var input = string
         if let suffixRange = input.range(of: "-") {
-            input = string.substring(to: suffixRange.lowerBound)
-            suffix = string.substring(from: suffixRange.lowerBound)
+            input = String(string[..<suffixRange.lowerBound])
+            suffix = String(string[suffixRange.lowerBound...])
         } else {
             suffix = ""
         }
@@ -53,7 +53,7 @@ public extension Version {
 
             var component = components[2]
             if let range = component.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) {
-                component = component.substring(to: range.lowerBound)
+                component = String(component[..<range.lowerBound])
             }
             
             guard let patch = Int(component) else { return nil }
